@@ -1,0 +1,17 @@
+.footer{
+  margin-top: 20px;
+  padding-top: 20px;
+  background: $gray;
+  font-size: 30px; color: white; font-weight: bold;
+  @include column;
+  @include dim(150px, 100vw);
+}
+#footericoncontainer{
+  @include row(space-between);
+}
+.footericon{
+  @include dim(50px, 50px);
+  border-radius: 30px;
+  margin: 10px 10px;
+  background: white;
+}

@@ -1,0 +1,82 @@
+.headerpic{
+  object-fit: cover;
+  height: 300px;
+}
+#mainbody{
+  padding: 0px 15px;
+  @include column;
+  p{
+    color: gray;
+    margin: 20px 20px;
+    span{
+      font-weight: bold;
+      font-size: 20px;
+      color: $darkpink;
+    }
+  }
+}
+#line{
+  @include dim(3px, 70vw);
+  margin-bottom: 20px;
+  border: 2px solid $darkpink;
+}
+.service{
+  width: calc(100vw - 20px);
+  margin-left: 20px;
+  padding: 10px 20px 0px 0px;
+  border-bottom: 2px solid $lightgreen;
+}
+.name-price{
+  @include row(space-between);
+  color: $darkgreen;
+  &:hover{
+    cursor: pointer;
+  }
+}
+h3{
+  font-size: 17px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.name-green{
+  color: $darkgreen;
+}
+.name-pink{
+  color: $darkpink;
+}
+.price{
+  color: $darkpink;
+  font-weight: bold;
+}
+.description{
+  margin-left: 20px;
+  color: $gray;
+}
+.details{
+  @include column;
+  overflow: hidden;
+
+  animation-name: smooth-toggle;
+  animation-duration: 200ms;
+  animation-timing-function: linear;
+}
+@keyframes smooth-toggle{
+  from{
+    transform: height (0px);
+  }
+  to{
+    transform: max-height (100px);
+  }
+}
+button{
+  margin: 15px 0px;
+  @include dim(40px, 300px);
+  border: none;
+  background: $darkpink;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  &:hover{
+    cursor: pointer;
+  }
+}
