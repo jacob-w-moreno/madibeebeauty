@@ -25,5 +25,10 @@ $pink: #fededc;
   @include column;
   min-height: 100vh;
 }
+@media (max-width: 1176px) {
+  .intro {
+    
+  }
+}
 @import './footer';
 @import './landing';

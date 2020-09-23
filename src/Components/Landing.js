@@ -1,16 +1,21 @@
 import React from 'react';
 import Footer from './Footer';
 import Service from './Service';
+import Madi from './Madi.jpg';
 
 const Landing = () => {
   return(
   <div id='main'>
-      <img className='headerpic' src='https://drive.google.com/uc?id=19ShXf9KqyOfYHhdgmOWmiJCKXGJT642Y' alt='Madi' width='100%'/>
-      <body id='mainbody'>
-      <p>
-      <span>HI, I'M MADI. </span>Curabitur quis elit nec tortor congue scelerisque. Nam tincidunt metus diam, quis tincidunt mauris egestas et. Nullam eget libero nec ante eleifend tristique. Nam rhoncus finibus sapien sit amet commodo. Sed ac tortor sapien. Nam eu ex fermentum, lobortis dolor ut, condimentum felis. Ut mollis orci turpis, et iaculis dui posuere a.
-      </p>
-      <div id='line'/>
+    <div className='intro'>
+      <img className='headerpic' src={Madi} alt='Madi'/>
+      <div className='intro__words'>
+        <h1>HI, I'M MADI</h1>
+        <p>A hair stylist who can do a lot of things. I can do very many important things that will all make you look better than you did when you came in here. Isn't that great?</p>
+        <button className='intro__button'>SCHEDULE AN APPOINTMENT</button>
+      </div>
+    </div>
+    <body className='mainbody'>
+      <h2>SERVICES</h2>
       <Service
         name='HIGHLIGHTS'
         price='$100+'
@@ -75,7 +80,7 @@ const Landing = () => {
         name='NOSE WAX'
         price='$10'
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor mattis nulla, quis suscipit urna iaculis sit amet.'/>
-      </body>
+    </body>
     <Footer/>
   </div>
   )

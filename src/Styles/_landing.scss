@@ -1,10 +1,43 @@
+.intro{
+  background: $darkpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include dim(600px, 100%);
+  background-size: cover;
+  h1{
+    font-size: 50px;
+    color: white;
+  }
+}
+h2{
+  font-size: 35px;
+  color: $gray;
+}
 .headerpic{
   object-fit: cover;
-  height: 300px;
+  height: 500px;
+  border-radius: 340px;
+  border: 15px solid white;
+  box-shadow: 0px 10px 15px 5px #a37979;
 }
-#mainbody{
+.intro__words{
+  width: 450px;
+  margin-left: 100px;
+  p{
+    font-size: 25px;
+  }
+}
+.intro__button{
+  background: white;
+  color: $darkpink;
+  font-size: 20px;
+  @include dim(50px, 350px)
+}
+.mainbody{
   padding: 0px 15px;
   @include column;
+  width: 100%; max-width: 700px;
   p{
     color: gray;
     margin: 20px 20px;
@@ -16,15 +49,19 @@
   }
 }
 #line{
-  @include dim(3px, 70vw);
+  width: 100%;
   margin-bottom: 20px;
   border: 2px solid $darkpink;
 }
 .service{
-  width: calc(100vw - 20px);
+  width: 100%;
   margin-left: 20px;
   padding: 10px 20px 0px 0px;
   border-bottom: 2px solid $lightgreen;
+  font-size: 20px;
+  h3{
+    font-size: 20px;
+  }
 }
 .name-price{
   @include row(space-between);
@@ -71,12 +108,13 @@ h3{
 button{
   margin: 15px 0px;
   @include dim(40px, 300px);
-  border: none;
+  border: none; border-radius: 10px;
   background: $darkpink;
   color: white;
   font-weight: bold;
   font-size: 16px;
   &:hover{
     cursor: pointer;
+    transform: scale(1.06);
   }
 }
