@@ -10,10 +10,10 @@ const Service = (props) => {
         <h3 className={details ? 'name-pink' : 'name-green'}>{props.name}</h3>
         {details ? <div className='price'>{props.price}</div> : '>'}
       </div>
-      {details ? 
+      {details ?
       <div className='details'>
-        <div className='description'>{props.description}</div> 
-        <button>BOOK AN APPOINTMENT</button>
+        <div className='description'>{props.description}</div>
+        <button onClick={()=>{props.setAlertFN(true)}}>BOOK AN APPOINTMENT</button>
       </div>
       : null}
     </div>
